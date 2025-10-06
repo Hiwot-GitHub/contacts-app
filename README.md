@@ -1,73 +1,101 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📘 contacts-app
 
-Currently, two official plugins are available:
+A simple React + TypeScript contacts application that displays a list of contacts grouped alphabetically.  
+Built with **Vite**, **React**, and **Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Demo:** [https://contacts-app-three-sigma.vercel.app](https://contacts-app-three-sigma.vercel.app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Displays a list of contacts grouped alphabetically (A–Z)
+- Clean and responsive UI
+- Built with modern technologies (React + Vite + Tailwind)
+- Fast, modular, and easy to customize
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React** — Frontend UI library  
+- **Vite** — Development and build tool  
+- **TypeScript** — Static typing  
+- **Tailwind CSS** — Styling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository:
+```bash
+git clone https://github.com/Hiwot-GitHub/contacts-app.git
+cd contacts-app
+💻 Running Locally
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Start the development server:
+
+yarn dev
+
+
+or
+
+npm run dev
+
+
+Open your browser at:
+
+http://localhost:5173
+
+🧱 Project Structure
+contacts-app/
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Page components
+│   ├── data/             # Contact data (JSON or TS)
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── package.json
+├── tailwind.config.js
+├── postcss.config.cjs
+└── README.md
+
+🌐 Deployment (Vercel)
+
+Push your code to GitHub:
+
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+
+Go to Vercel
+ → Add New Project → Import Git Repository
+
+Select your contacts-app repository
+
+Keep the default build settings (Vite auto-detected):
+
+Build Command: vite build
+
+Output Directory: dist
+
+Click Deploy
+Your app will be live within seconds 🚀
+
+💡 Future Improvements
+
+Add contact search functionality
+
+Add “Add Contact” form
+
+Store contact data using a database or API
+
+Add light/dark mode toggle
+
+📄 License
+
+This project is licensed under the MIT License.
